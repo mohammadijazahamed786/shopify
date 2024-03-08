@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Registration Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/css/bootstrap.min.css">
+    <style>
+        .bg-image {
+            background-image: url('assets/image/c2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 150vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image d-flex align-items-center justify-content-center">
+       
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+                <form #regForm="ngForm" (ngSubmit)="CustomerRegistration(regForm.value)">
+                    <div class="mb-3">
+                        <label for="Name" style="color: #fff;" class="form-label" >Enter Your Name:</label>
+                        <input type="text" id="Name" class="form-control" #Name="ngModel" name="name" ngModel placeholder="Enter Your Name..." required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" style="color: #fff;" class="form-label">Enter Your Emailid:</label>
+                        <input type="text" id="email" class="form-control" #email="ngModel" name="email" ngModel placeholder="Enter Your Emailid" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="gender" style="color: #fff;" class="form-label">Enter Your Gender:</label>
+                        <input type="text" id="gender" class="form-control" #gender="ngModel" name="gender" ngModel placeholder="Enter Your Gender" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" style="color: #fff;" class="form-label">Enter Your password:</label>
+                        <input type="password" id="password" class="form-control" #password="ngModel" name="password" ngModel placeholder="Enter Your password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="PhoneNumber" style="color: #fff;" class="form-label">Enter Your PhoneNumber:</label>
+                        <input type="number" id="PhoneNumber" class="form-control" #PhoneNumber="ngModel" name="phoneNumber" ngModel placeholder="Enter Your PhoneNumber" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="country" style="color: #fff;" class="form-label">Select Country:</label>
+                        <select id="country" class="form-select" name="country" ngModel>
+                            <option value="{{ country.alpha3Code }}" *ngFor="let country of countriesList">{{ country.name }}</option>
+                        </select>
+                    </div>
+                    <button type="submit" style="color:#fff;"class="btn btn-primary" [disabled]="!regForm.valid">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

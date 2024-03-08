@@ -1,0 +1,65 @@
+/* .cur{
+    cursor: grab;
+}
+.logo{
+    width: 80px;
+    height: 80px;
+  }
+.s{
+    cursor:pointer;
+} */
+.nav-link active{
+    color: white;
+}
+.collapse {
+text-align: left;
+}
+.profile-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .profile-text-container {
+    margin: 0 20px;
+  }
+  
+  .profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .toggle {
+    display: inline-block;
+    position: relative;
+    width: 48px;
+    height: 24px;
+    background-color: #333;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-icon {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    color: #fff;
+    font-size: 16px;
+    transition: transform 0.3s;
+  }
+  
+  .toggle-ball {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  

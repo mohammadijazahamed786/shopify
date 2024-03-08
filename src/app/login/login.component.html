@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .bg-image {
+            background-image: url('assets/image/login.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; 
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form #loginForm="ngForm" (ngSubmit)="loginFormSubmit(loginForm.value)" novalidate>
+                        <div class="form-group">
+                            <label for="email" style="color: #fff;">Enter Email Id: </label>
+                            <input type="text" class="form-control" ngModel name="email" required #email="ngModel" placeholder="Enter Your Email">
+                            <div *ngIf="email.errors?.['required'] && email.dirty" class="text-danger">Please enter login id</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" style="color: #fff;">Enter Password: </label>
+                            <input type="password" class="form-control" name="password" ngModel required #password="ngModel" placeholder="Enter Your password">
+                            <div *ngIf="password.errors?.['required'] && password.dirty" class="text-danger">Please enter password</div>
+                            <div *ngIf="password.errors?.['required'] && password.touched" class="text-danger">Password is mandatory</div>
+                        </div>
+                        <button [disabled]="!loginForm.valid" class="btn btn-warning">Login</button>
+                    </form>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

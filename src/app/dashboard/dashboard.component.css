@@ -1,0 +1,51 @@
+.container{
+  width: fit-content;
+}
+.text{
+  text-align: center;
+ 
+  margin-bottom: 200px;
+}
+#carousel{
+  
+  height: 500px;
+  width:500px
+  
+}
+.profile{
+  display: flex;
+ 
+  
+}
+
+.dot{
+text-align: center;
+}
+.dot2{
+  text-align:center;
+  color: aliceblue;
+}
+.button1{
+  margin-left: 20px;
+  padding:10px;
+  background-color: gold;
+  text-decoration: none;
+  color: white;
+}
+
+.company{
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: medium;
+}
+ul li a
+{
+  text-decoration: none;
+  
+}
+.mtop{
+  
+  background-color: slategrey;
+  text-align: justify;
+}
